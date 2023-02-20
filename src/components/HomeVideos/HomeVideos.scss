@@ -22,4 +22,10 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
+    height: 44px;
   }
+
+.homevideos_video-info {
+    display: flex;
+    justify-content: space-between;
+}

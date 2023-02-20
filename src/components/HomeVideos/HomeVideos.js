@@ -20,6 +20,7 @@ function HomeVideos() {
         fetchVideos();
     }, []);
 
+
     return (
         <div className="homevideos_container">
             <div className='homevideos_grid-container'>
@@ -28,6 +29,10 @@ function HomeVideos() {
                     <img src={video.videoThumbnail} alt="videoThumbnails"></img>
                     <h3>{video.videoTitle}</h3>
                     <p>{video.creator.name}</p>
+                    <div className='homevideos_video-info'>
+                    <span>{video.viewCount} views</span>
+                    <span>{video.publishData.slice(0,10)}</span>
+                    </div>
                 </div>
             ))}
             </div>
