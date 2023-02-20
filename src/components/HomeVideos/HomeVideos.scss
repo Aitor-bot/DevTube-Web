@@ -25,7 +25,14 @@
     height: 44px;
   }
 
+.homevideos_grid p {
+    font-size: 1rem;
+    margin-top: -15px;
+}
+
 .homevideos_video-info {
     display: flex;
     justify-content: space-between;
+    font-size: 0.9rem;
+    margin-top: -10px;
 }
