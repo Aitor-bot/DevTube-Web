@@ -1,0 +1,17 @@
+.homevideos_container {
+    color: white;
+}
+
+.homevideos_grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 360px;
+    margin: 0 auto;
+    gap: 30px;
+    justify-content: center;
+}
+
+.homevideos_grid img {
+    width: 360px;
+    height: 202px;
+}
