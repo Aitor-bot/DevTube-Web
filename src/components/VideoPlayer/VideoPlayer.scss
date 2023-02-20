@@ -1,3 +1,6 @@
 .videoplayer_container {
-    color: red;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 20px;
 }
