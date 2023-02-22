@@ -1,19 +1,22 @@
 .homevideos_container {
     color: white;
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 .homevideos_grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 360px;
-    margin: 0 auto;
-    gap: 30px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+    grid-gap: 20px;
 }
 
-.homevideos_grid img {
-    width: 360px;
-    height: 202px;
+.homevideos_image {
+    position: relative;
+}
+
+.homevideos_image img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .homevideos_grid h3 {

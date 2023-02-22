@@ -4,7 +4,7 @@ import axios from "axios";
 
 
 function HomeVideos() {
-    
+
     const [videos, setVideo] = useState([]);
 
     useEffect(() => {
@@ -23,18 +23,20 @@ function HomeVideos() {
 
     return (
         <div className="homevideos_container">
-            <div className='homevideos_grid-container'>
-            {videos.map((video) => (
-                <div className='homevideos_grid' key={video.videoId}>
-                    <img src={video.videoThumbnail} alt="videoThumbnails"></img>
-                    <h3>{video.videoTitle}</h3>
-                    <p>{video.creator.name}</p>
-                    <div className='homevideos_video-info'>
-                    <span>{video.viewCount} views</span>
-                    <span>{video.publishData.slice(0,10)}</span>
+            <div className="homevideos_grid-container">
+                {videos.map((video) => (
+                    <div className="homevideos_grid" key={video.videoId}>
+                        <div className="homevideos_image">
+                            <img src={video.videoThumbnail} alt="videoThumbnail" />
+                        </div>
+                        <h3>{video.videoTitle}</h3>
+                        <p>{video.creator.name}</p>
+                        <div className='homevideos_video-info'>
+                            <span>{video.viewCount} views</span>
+                            <span>{video.publishData.slice(0, 10)}</span>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
             </div>
         </div>
     );
