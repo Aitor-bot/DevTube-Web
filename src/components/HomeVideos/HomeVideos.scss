@@ -25,15 +25,19 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 44px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
   }
 
-.homevideos_grid p {
-    font-size: 1rem;
-    margin-top: -15px;
+.homevideos_video-info {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #aaa;
 }
 
-.homevideos_video-info {
+.homevideos_video-data {
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
