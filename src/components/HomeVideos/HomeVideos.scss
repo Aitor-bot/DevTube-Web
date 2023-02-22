@@ -2,12 +2,16 @@
     color: white;
     max-width: 1700px;
     margin: 0 auto;
-}
+
+  }
+
 
 .homevideos_grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
     grid-gap: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .homevideos_image {
@@ -17,6 +21,7 @@
 .homevideos_image img {
     width: 100%;
     object-fit: cover;
+    border-radius: 13px;
 }
 
 .homevideos_grid h3 {
