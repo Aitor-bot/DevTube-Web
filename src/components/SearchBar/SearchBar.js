@@ -1,5 +1,6 @@
 import React from "react";
 import "./SearchBar.scss";
+import { AiOutlineSearch } from "react-icons/ai";
 
 const SearchBar = () => {
   return (
@@ -9,7 +10,7 @@ const SearchBar = () => {
         type="text"
         placeholder="Buscar..."
       />
-      <button className="searchbar_button">Buscar</button>
+      <button className="searchbar_button"><AiOutlineSearch size={30}/></button>
     </div>
   );
 };
