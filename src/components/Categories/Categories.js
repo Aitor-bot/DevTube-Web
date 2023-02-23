@@ -8,20 +8,6 @@ function Categories() {
                 <div className='categories_layout' >
                     <a href="!#">
                         <p className="category-label">
-                            Novedades
-                        </p>
-                    </a>
-                </div>
-                <div className='categories_layout'>
-                    <a href="!#">
-                        <p className="category-label">
-                            Top Devs
-                        </p>
-                    </a>
-                </div>
-                <div className='categories_layout'>
-                    <a href="!#">
-                        <p className="category-label">
                             Desarrollo Web
                         </p>
                     </a>
@@ -30,6 +16,20 @@ function Categories() {
                     <a href="!#">
                         <p className="category-label">
                             Desarrollo App
+                        </p>
+                    </a>
+                </div>
+                <div className='categories_layout'>
+                    <a href="!#">
+                        <p className="category-label">
+                            Desarrollo Juegos
+                        </p>
+                    </a>
+                </div>
+                <div className='categories_layout'>
+                    <a href="!#">
+                        <p className="category-label">
+                            Hacking
                         </p>
                     </a>
                 </div>
