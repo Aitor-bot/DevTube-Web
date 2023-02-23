@@ -14,10 +14,16 @@
   border-color: rgba($color: #ffffff, $alpha: 0.2);
   border-radius: 5px;
   padding-left: 10px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.searchbar_input:focus {
+  border-color: #0466c8;
+  outline: none;
 }
 
 .searchbar_button {
-  background-color: #007bff;
+  background-color: #0466c8;
   color: #fff;
   height: 35px;
   width: 40px;
