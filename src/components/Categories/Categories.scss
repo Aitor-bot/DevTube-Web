@@ -1,8 +1,15 @@
 .categories_container {
   max-width: 1900px;
   margin: 0 auto;
+}
+
+.categories_title {
+  color: #d8dae0;
+  font-size: 50px;
+}
+
+.categories_gridcontainer {
   display: flex;
-  margin-top: 50px;
   gap: 20px;
 }
 
@@ -20,12 +27,13 @@
 
 .category-label {
   background-color: #0466c8;
+  display: flex;
+  align-items: center;
   height: 45px;
   border-radius: 8px;
   padding-left: 10px;
   margin: 0;
-  display: flex;
-  align-items: center;
+
   color: white;
   font-size: 24px;
   font-weight: 500;
