@@ -20,7 +20,6 @@ function HomeVideos() {
         fetchVideos();
     }, []);
 
-
     return (
         <div className="homevideos_container">
             <div className="homevideos_grid-container">

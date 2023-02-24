@@ -9,7 +9,7 @@
 .homevideos_grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 25px;
 }
 
 .homevideos_grid {
@@ -18,6 +18,12 @@
 
 .homevideos_image {
     position: relative;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateZ(20px) rotateX(-10deg) scale(1.1);
+          }
+
 }
 
 .homevideos_image img {
