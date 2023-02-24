@@ -1,49 +1,50 @@
-import './VideoPlayer.scss';
 import React, { useState, useEffect } from "react";
-import YouTube from 'react-youtube';
 import axios from "axios";
+import YouTube from 'react-youtube';
 
+function VideoPlayer({ videoId }) {
+  const [video, setVideo] = useState(null);
 
-function VideoPlayer() {
-    
-    const [videos, setVideo] = useState([]);
+  useEffect(() => {
+    async function fetchVideo() {
+      try {
+        const response = await axios.get(`http://localhost:3001/getVideoData/${videoId}`);
+        setVideo(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
 
-    useEffect(() => {
-        async function fetchVideos() {
-            try {
-                const response = await axios.get("http://localhost:3001/getAllData");
-                setVideo(response.data);
-            } catch (error) {
-                console.error(error);
-            }
-        }
+    fetchVideo();
+  }, [videoId]);
 
-        fetchVideos();
-    }, []);
+  const opts = {
+    height: '390',
+    width: '640',
+    playerVars: {
+      autoplay: 1,
+    },
+  };
 
-    const onReady = (event) => {
-        // access to player in all event handlers via event.target
-        event.target.pauseVideo();
-    };
-
-    const opts = {
-        height: '180',
-        width: '305',
-        playerVars: {
-            // https://developers.google.com/youtube/player_parameters
-        },
-        origin: window.location.origin,
-    };
-
-    return (
-        <div className="videoplayer_container">
-            {videos.map((video) => (
-                <div key={video.videoId}>
-                    <YouTube videoId={video.videoId} opts={opts} onReady={onReady} />
-                </div>
-            ))}
+  return (
+    <div>
+      {video ? (
+        <div>
+          <YouTube videoId={videoId} opts={opts} />
+          <h1>{video.videoTitle}</h1>
+          <div className="video-player-info">
+            <img src={video.creator.avatar} alt="Channel Avatar" />
+            <div>
+              <h2>{video.creator.name}</h2>
+              <p>{video.creator.subscribersCount} subscribers</p>
+            </div>
+          </div>
         </div>
-    );
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
+  );
 }
 
 export default VideoPlayer;
