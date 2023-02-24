@@ -29,7 +29,7 @@ function HomeVideos() {
                         <div className="homevideos_image">
                             <img src={video.videoThumbnail} alt="videoThumbnail" />
                         </div>
-                        <h3>{video.videoTitle}</h3>
+                        <h3 title={video.videoTitle}>{video.videoTitle}</h3>
                         <div className='homevideos_video-info'>
                             <p>{video.creator.name}</p>
                             <div className='homevideos_video-data'>

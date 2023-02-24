@@ -4,13 +4,16 @@
     margin: 0 auto;
     margin-top: 50px;
 
-  }
-
+}
 
 .homevideos_grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
     grid-gap: 20px;
+}
+
+.homevideos_grid {
+    cursor: pointer;
 }
 
 .homevideos_image {
@@ -32,7 +35,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
-  }
+}
 
 .homevideos_video-info {
     font-size: 14px;
