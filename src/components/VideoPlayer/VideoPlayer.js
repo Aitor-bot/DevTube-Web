@@ -1,6 +1,10 @@
+import './VideoPlayer.scss';
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import YouTube from 'react-youtube';
+
+
 
 function VideoPlayer({ videoId }) {
   const [video, setVideo] = useState(null);
@@ -19,8 +23,8 @@ function VideoPlayer({ videoId }) {
   }, [videoId]);
 
   const opts = {
-    height: '390',
-    width: '640',
+    height: '811',
+    width: '2544',
     playerVars: {
       autoplay: 1,
     },
@@ -29,14 +33,14 @@ function VideoPlayer({ videoId }) {
   return (
     <div>
       {video ? (
-        <div>
-          <YouTube videoId={videoId} opts={opts} />
-          <h1>{video.videoTitle}</h1>
-          <div className="video-player-info">
+        <div className='videoplayer_container'>
+          <YouTube className='videoplayer_youtube' videoId={videoId} opts={opts} />
+          <h1 className='videoplayer_title'>{video.videoTitle}</h1>
+          <div className="videoplayer_info">
             <img src={video.creator.avatar} alt="Channel Avatar" />
             <div>
-              <h2>{video.creator.name}</h2>
-              <p>{video.creator.subscribersCount} subscribers</p>
+              <h2 className='videoplayer_channelname'>{video.creator.name}</h2>
+              <p className='videoplayer_subs'>{video.creator.subscribersCount} suscriptores</p>
             </div>
           </div>
         </div>
