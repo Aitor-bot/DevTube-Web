@@ -1,6 +1,38 @@
 .videoplayer_container {
     display: flex;
+    flex-direction: column;
+}
+
+.videoplayer_youtube {
+    display: flex;
+    justify-content: center;
+}
+
+.videoplayer_title {
+    font-size: 20px;
+}
+
+.videoplayer_info {
+    display: flex;
     flex-direction: row;
-    color: white;
-    gap: 20px;
+    gap: 10px;
+}
+
+.videoplayer_info img {
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+.videoplayer_channelname {
+    font-size: 17px;
+    margin: 0;
+}
+
+.videoplayer_subs {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #aaa;
+    margin-top: 3px;
 }
