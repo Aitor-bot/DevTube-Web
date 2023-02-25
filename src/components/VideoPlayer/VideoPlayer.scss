@@ -47,6 +47,12 @@
     overflow-y: scroll;
 }
 
+@media only screen and (max-width: 1015px) {
+    .videoplayer_data {
+      max-width: 100%;
+    }
+  }
+
 .videoplayer_data::-webkit-scrollbar {
     width: 12px;
     background-color: #212529;
