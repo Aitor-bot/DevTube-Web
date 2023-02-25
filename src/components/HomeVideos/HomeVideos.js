@@ -10,7 +10,7 @@ function HomeVideos() {
     useEffect(() => {
         async function fetchVideos() {
             try {
-                const response = await axios.get("http://localhost:3001/getAllData");
+                const response = await axios.get("http://localhost:3001/getData");
                 setVideo(response.data);
             } catch (error) {
                 console.log(error);
