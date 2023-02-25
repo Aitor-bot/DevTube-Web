@@ -3,6 +3,7 @@ import './VideoPlayer.scss';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import YouTube from 'react-youtube';
+import Recommendations from '../Recommendations/Recommendations';
 
 function VideoPlayer({ videoId }) {
     const [video, setVideo] = useState(null);
@@ -56,6 +57,7 @@ function VideoPlayer({ videoId }) {
                         <span className='videoplayer_data-publish'>{video.publishData.slice(0, 10)}</span>
                         <div className="videoplayer_data-description">{giveFormatToDescription(video.videoDescription)}</div>
                     </div>
+                    <Recommendations></Recommendations>
                 </div>
             ) : (
                 <p>Loading...</p>
