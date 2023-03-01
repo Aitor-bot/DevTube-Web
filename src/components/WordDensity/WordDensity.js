@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./WordDensity.scss";
 
-function WordDensity() {
+function WordDensity({ videoId }) {
     const [wordCount, setWordCount] = useState(0);
     const [wordsPerMinute, setWordsPerMinute] = useState(0);
     const [topWords, setTopWords] = useState([]);
@@ -11,7 +11,7 @@ function WordDensity() {
         async function fetchWordData() {
             try {
                 const response = await axios.get(
-                    "http://localhost:3001/getTranscriptionDataForVideo/NGmIZD2bXsE"
+                    `http://localhost:3001/getTranscriptionDataForVideo/${videoId}`
                 );
                 setWordCount(response.data.wordCount);
                 setWordsPerMinute(response.data.wordsPerMinute);
@@ -21,7 +21,7 @@ function WordDensity() {
             }
         }
         fetchWordData();
-    }, []);
+    }, [videoId]);
 
     return (
         <div className="worddensity_container">

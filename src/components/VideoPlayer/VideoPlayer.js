@@ -3,7 +3,8 @@ import './VideoPlayer.scss';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import YouTube from 'react-youtube';
-import Recommendations from '../Recommendations/Recommendations';
+//import Recommendations from '../Recommendations/Recommendations';
+import WordDensity from '../WordDensity/WordDensity';
 
 function VideoPlayer({ videoId }) {
     const [video, setVideo] = useState(null);
@@ -57,7 +58,7 @@ function VideoPlayer({ videoId }) {
                         <span className='videoplayer_data-publish'>{video.publishData.slice(0, 10)}</span>
                         <div className="videoplayer_data-description">{giveFormatToDescription(video.videoDescription)}</div>
                     </div>
-                    <Recommendations></Recommendations>
+                    <WordDensity videoId={videoId}></WordDensity>
                 </div>
             ) : (
                 <p>Loading...</p>
