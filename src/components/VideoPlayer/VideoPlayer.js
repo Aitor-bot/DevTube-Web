@@ -8,7 +8,7 @@ import Recommendations from '../Recommendations/Recommendations';
 
 function VideoPlayer({ videoId }) {
     const [video, setVideo] = useState(null);
-    const [componentToShow, setComponentToShow] = useState('wordDensity');
+    const [componentToShow, setComponentToShow] = useState('recommendations');
 
     useEffect(() => {
         async function fetchVideo() {
@@ -58,9 +58,23 @@ function VideoPlayer({ videoId }) {
                         </div>
                     </div>
                     <div className='videoplayer_button-container'>
-                        <button className="videoplayer_button" onClick={() => setComponentToShow('wordDensity')}>Word Density</button>
-                        <button className="videoplayer_button" onClick={() => setComponentToShow('recommendations')}>Recommendations</button>
+                        <button
+                            className={`videoplayer_button ${componentToShow === 'recommendations' ? 'active' : ''}`}
+                            onClick={() => setComponentToShow('recommendations')}
+                        >
+                            Traditional
+                        </button>
+
+                        <button
+                            className={`videoplayer_button ${componentToShow === 'wordDensity' ? 'active' : ''}`}
+                            onClick={() => setComponentToShow('wordDensity')}
+                        >
+                            Transcription
+                        </button>
+
+
                     </div>
+
                     <div className='videoplayer_data'>
                         <span className='videoplayer_data-views'>{video.viewCount} visitas</span>
                         <span className='videoplayer_data-publish'>{video.publishData.slice(0, 10)}</span>
@@ -75,7 +89,7 @@ function VideoPlayer({ videoId }) {
 
                     {componentToShow === 'wordDensity' && <WordDensity videoId={videoId}></WordDensity>}
                     {componentToShow === 'recommendations' && <Recommendations videoId={videoId}></Recommendations>}
-                
+
                 </div>
             ) : (
                 <p>Loading...</p>
