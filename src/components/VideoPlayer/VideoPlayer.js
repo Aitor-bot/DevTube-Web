@@ -57,9 +57,9 @@ function VideoPlayer({ videoId }) {
                             <p className='videoplayer_subs'>{video.creator.subscribersCount} suscriptores</p>
                         </div>
                     </div>
-                    <div className="videoplayer_buttons">
-                        <button onClick={() => setComponentToShow('wordDensity')}>Word Density</button>
-                        <button onClick={() => setComponentToShow('recommendations')}>Recommendations</button>
+                    <div className='videoplayer_button-container'>
+                        <button className="videoplayer_button" onClick={() => setComponentToShow('wordDensity')}>Word Density</button>
+                        <button className="videoplayer_button" onClick={() => setComponentToShow('recommendations')}>Recommendations</button>
                     </div>
                     <div className='videoplayer_data'>
                         <span className='videoplayer_data-views'>{video.viewCount} visitas</span>

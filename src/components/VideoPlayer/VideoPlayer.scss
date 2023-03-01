@@ -82,3 +82,24 @@
     font-weight: 500;
 }
 
+.videoplayer_button {
+  background-color: #222;
+  border-radius: 4px;
+  border: 2px solid #0466c8;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  height: 44px;
+  width: 200px;
+  user-select: none;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.videoplayer_button:hover,
+.videoplayer_button:focus {
+  opacity: .75;
+}
