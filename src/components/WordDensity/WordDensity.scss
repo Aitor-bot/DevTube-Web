@@ -4,6 +4,7 @@
     max-width: 500px;
     margin-left: auto;
     margin-top: -170px;
+    min-height: 500px;
   
     @media only screen and (max-width: 1015px) {
       margin-left: 0px;
@@ -13,6 +14,5 @@
   }
 
   .worddensity_details {
-
     width: 350px;
   }

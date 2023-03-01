@@ -3,11 +3,12 @@ import './VideoPlayer.scss';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import YouTube from 'react-youtube';
-//import Recommendations from '../Recommendations/Recommendations';
 import WordDensity from '../WordDensity/WordDensity';
+import Recommendations from '../Recommendations/Recommendations';
 
 function VideoPlayer({ videoId }) {
     const [video, setVideo] = useState(null);
+    const [componentToShow, setComponentToShow] = useState('wordDensity');
 
     useEffect(() => {
         async function fetchVideo() {
@@ -21,6 +22,9 @@ function VideoPlayer({ videoId }) {
 
         fetchVideo();
     }, [videoId]);
+
+    const wordDensityDescription = video ? video.transcribedText : '';
+    const recommendationsDescription = video ? video.videoDescription : '';
 
     const opts = {
         height: '811',
@@ -53,12 +57,25 @@ function VideoPlayer({ videoId }) {
                             <p className='videoplayer_subs'>{video.creator.subscribersCount} suscriptores</p>
                         </div>
                     </div>
+                    <div className="videoplayer_buttons">
+                        <button onClick={() => setComponentToShow('wordDensity')}>Word Density</button>
+                        <button onClick={() => setComponentToShow('recommendations')}>Recommendations</button>
+                    </div>
                     <div className='videoplayer_data'>
                         <span className='videoplayer_data-views'>{video.viewCount} visitas</span>
                         <span className='videoplayer_data-publish'>{video.publishData.slice(0, 10)}</span>
-                        <div className="videoplayer_data-description">{giveFormatToDescription(video.videoDescription)}</div>
+                        <div className="videoplayer_data-description">
+                            {componentToShow === 'wordDensity' ? (
+                                giveFormatToDescription(wordDensityDescription)
+                            ) : (
+                                giveFormatToDescription(recommendationsDescription)
+                            )}
+                        </div>
                     </div>
-                    <WordDensity videoId={videoId}></WordDensity>
+
+                    {componentToShow === 'wordDensity' && <WordDensity videoId={videoId}></WordDensity>}
+                    {componentToShow === 'recommendations' && <Recommendations videoId={videoId}></Recommendations>}
+                
                 </div>
             ) : (
                 <p>Loading...</p>
