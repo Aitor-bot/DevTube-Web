@@ -1,19 +1,28 @@
 import './App.css';
-import Categories from './components/Categories/Categories';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
-import HomeVideos from './components/HomeVideos/HomeVideos';
+import Categories from './components/Categories/Categories';
 import NavigationLinks from './components/NavigationLinks/NavigationLinks';
+import HomeVideos from './components/HomeVideos/HomeVideos';
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-      <div className='margins'>
-      <Categories></Categories>
-      <NavigationLinks></NavigationLinks>
-      <HomeVideos></HomeVideos>
-      
-      </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Router>
+  );
+}
+
+function HomePage() {
+  return (
+    <div className='margins'>
+      <Categories />
+      <NavigationLinks />
+      <HomeVideos />
     </div>
   );
 }
