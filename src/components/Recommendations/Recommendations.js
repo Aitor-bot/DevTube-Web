@@ -20,10 +20,19 @@ function Recommendations() {
         fetchVideos();
     }, []);
 
+    const goToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <div className="recommendations_container">
             {videos.map((video) => (
-                <Link to={`/video/${video.videoId}`} key={video.videoId}>
+                <Link to={`/video/${video.videoId}`} key={video.videoId}
+                onClick={goToTop}
+                >
                     <div className="recommendations_subcontainer" key={video.videoId}>
                         <div className="recommendations_image">
                             <img src={video.videoThumbnail} alt="videoThumbnail" />
