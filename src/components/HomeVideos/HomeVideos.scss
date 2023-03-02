@@ -1,5 +1,4 @@
 .homevideos_container {
-    color: white;
     max-width: 1900px;
     margin: 0 auto;
     margin-top: 50px;
@@ -55,4 +54,10 @@
     justify-content: space-between;
     font-size: 0.9rem;
     margin-top: -10px;
+}
+
+
+a:-webkit-any-link {
+    color: white !important;
+    text-decoration: none !important;
 }
