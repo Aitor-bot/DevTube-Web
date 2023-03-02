@@ -24,7 +24,6 @@ function HomeVideos() {
       <div className="homevideos_grid-container">
         {videos.map((video) => (
           <Link to={`/video/${video.videoId}`} key={video.videoId}>
-
               <div className="homevideos_image">
                 <img src={video.videoThumbnail} alt="videoThumbnail" />
               </div>
