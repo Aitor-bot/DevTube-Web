@@ -1,10 +1,11 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Categories from './components/Categories/Categories';
 import NavigationLinks from './components/NavigationLinks/NavigationLinks';
 import HomeVideos from './components/HomeVideos/HomeVideos';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/video/:videoId" element={<WatchVideo />} />
       </Routes>
     </Router>
   );
@@ -23,6 +25,15 @@ function HomePage() {
       <Categories />
       <NavigationLinks />
       <HomeVideos />
+    </div>
+  );
+}
+function WatchVideo() {
+  const { videoId } = useParams();
+
+  return (
+    <div className='margins'>
+      <VideoPlayer videoId={videoId} />
     </div>
   );
 }
