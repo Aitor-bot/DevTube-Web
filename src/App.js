@@ -1,11 +1,12 @@
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Categories from './components/Categories/Categories';
 import NavigationLinks from './components/NavigationLinks/NavigationLinks';
 import HomeVideos from './components/HomeVideos/HomeVideos';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+import DevelopersList from './components/DevelopersList/DevelopersList';
 
 function App() {
   return (
@@ -20,14 +21,21 @@ function App() {
 }
 
 function HomePage() {
+  const [selectedLink, setSelectedLink] = useState('newvideos');
+
+  const handleLinkClick = (link) => {
+    setSelectedLink(link);
+  };
+
   return (
     <div className='margins'>
       <Categories />
-      <NavigationLinks />
-      <HomeVideos />
+      <NavigationLinks onLinkClick={handleLinkClick} />
+      {selectedLink === 'newvideos' ? <HomeVideos /> : <DevelopersList />}
     </div>
   );
 }
+
 function WatchVideo() {
   const { videoId } = useParams();
 

@@ -11,12 +11,14 @@
     font-size: 20px;
     color: white;
     cursor: pointer;
-    text-decoration: none;
     padding-bottom: 2px;
     transition: color 0.3s ease-in-out;
+    background-color: transparent;
+    border: 0px;
   }
   
   .selected {
     color: #5ca3ff;
     border-bottom: 2px solid #5ca3ff;
   }
+

@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
 import './NavigationLinks.scss';
 
-function NavigationLinks() {
-  const [selectedLink, setSelectedLink] = useState('novedades');
+function NavigationLinks({ onLinkClick }) {
+  const [selectedLink, setSelectedLink] = useState('newvideos');
 
   const handleLinkClick = (link) => {
     setSelectedLink(link);
+    onLinkClick(link);
   };
 
   return (
     <div className="navigation-links-container">
-      <p
-        className={`navigation-link ${selectedLink === 'novedades' ? 'selected' : ''}`}
-        onClick={() => handleLinkClick('novedades')}
+      <button
+        className={`navigation-link ${selectedLink === 'newvideos' ? 'selected' : ''}`}
+        onClick={() => handleLinkClick('newvideos')}
       >
         Novedades
-      </p>
-      <p
-        className={`navigation-link ${selectedLink === 'top-developers' ? 'selected' : ''}`}
-        onClick={() => handleLinkClick('top-developers')}
+      </button>
+      <button
+        className={`navigation-link ${selectedLink === 'topdevelopers' ? 'selected' : ''}`}
+        onClick={() => handleLinkClick('topdevelopers')}
       >
         Top Developers
-      </p>
+      </button>
     </div>
   );
 }
+
 
 export default NavigationLinks;
