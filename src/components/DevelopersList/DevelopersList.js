@@ -5,6 +5,8 @@ import axios from 'axios';
 function DevelopersList() {
     const [devData, setDevData] = useState([])
 
+    
+
     useEffect(() => {
         async function fetchDevelopers() {
             try {
@@ -17,10 +19,18 @@ function DevelopersList() {
         fetchDevelopers()
     }, [])
 
+
     return (
         <div className="devlist_container">
             {devData.map((dev) => (
-                <div key={dev.name}>{dev.name}</div>
+                <div className='devlist_subcontainer' key={dev._id}>
+                    <img className='devlist_image' src={dev.avatar} alt="developers-avatar"></img> 
+                    <div className='devlist_data'>
+                    <span>{dev.name}</span> 
+                    <span>{dev.subscribersCount}</span>
+                    </div>
+                </div>
+
             ))}
         </div>
     );
