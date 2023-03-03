@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './DevelopersList.scss';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 function DevelopersList() {
     const [devData, setDevData] = useState([])
@@ -19,19 +20,18 @@ function DevelopersList() {
         fetchDevelopers()
     }, [])
 
-
     return (
         <div className="devlist_container">
-            {devData.map((dev) => (
-                <div className='devlist_subcontainer' key={dev._id}>
-                    <img className='devlist_image' src={dev.avatar} alt="developers-avatar"></img> 
-                    <div className='devlist_data'>
-                    <span>{dev.name}</span> 
-                    <span>{dev.subscribersCount}</span>
-                    </div>
-                </div>
-
-            ))}
+            <div className="devlist_grid-container">
+                {devData.map((dev) => (
+                    <Link key={dev._id}>
+                        <div className="devlist_image">
+                            <img src={dev.avatar} alt="dev avatar" />
+                        </div>
+                        <h3>{dev.name}</h3>
+                    </Link>
+                ))}
+            </div>
         </div>
     );
 }

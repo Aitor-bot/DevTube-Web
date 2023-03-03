@@ -1,19 +1,27 @@
 .devlist_container {
     max-width: 1900px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    color: white;
     margin-top: 50px;
-    gap: 20px;
+
 }
 
-.devlist_subcontainer {
-    cursor: pointer;    
+.devlist_grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 25px;
 }
 
-.devlist_data {
-    display: flex;
-    flex-direction: column;
+.devlist_image {
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateZ(20px) rotateX(-10deg) scale(1.1);
+          }
+
+}
+
+.devlist_image img {
+    width: 150px;
+    border-radius: 13px;
 }
