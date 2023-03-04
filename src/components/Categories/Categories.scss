@@ -10,30 +10,33 @@
 
 .categories_gridcontainer {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
+  
 }
 
 .categories_layout {
-  flex-basis: 400px;
-  /*max-width: 400px;
-    width: 400px;
-    min-width: 300px*/
+  flex: 1 1 calc(50% - 10px);
+  max-width: 400px;
+  background-color: #0466c8;
+  border-radius: 8px;
 
 }
 
-.categories_layout a {
-  text-decoration: none;
+@media only screen and (min-width: 768px) {
+  .categories_layout {
+    flex: 1 1 calc(25% - 15px);
+  }
 }
 
 .category-label {
-  background-color: #0466c8;
   display: flex;
   align-items: center;
   height: 45px;
-  border-radius: 8px;
   padding-left: 10px;
   margin: 0;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
 }
