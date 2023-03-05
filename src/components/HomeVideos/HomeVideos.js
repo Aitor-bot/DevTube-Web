@@ -9,7 +9,7 @@ function HomeVideos({ category }) {
   useEffect(() => {
     async function fetchVideos() {
       try {
-        let endpoint = "http://localhost:3001/getData"; 
+        let endpoint = "http://localhost:3001/getData";
         if (category) {
           endpoint = `http://localhost:3001/getData/${category}`;
         }
@@ -22,22 +22,31 @@ function HomeVideos({ category }) {
 
     fetchVideos();
   }, [category]);
+
+  function formatDuration(duration) {
+    const minutes = Math.floor(duration / 60);
+    const seconds = duration % 60;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
+
+
   return (
     <div className="homevideos_container">
       <div className="homevideos_grid-container">
         {videos.map((video) => (
           <Link to={`/video/${video.videoId}`} key={video.videoId}>
-              <div className="homevideos_image">
-                <img src={video.videoThumbnail} alt="videoThumbnail" />
+            <div className="homevideos_image">
+              <div className="homevideos_duration">{formatDuration(video.videoDuration)}</div>
+              <img src={video.videoThumbnail} alt="videoThumbnail" />
+            </div>
+            <h3 title={video.videoTitle}>{video.videoTitle}</h3>
+            <div className="homevideos_video-info">
+              <p>{video.creator.name}</p>
+              <div className="homevideos_video-data">
+                <span>{video.viewCount} views</span>
+                <span>{video.publishData.slice(0, 10)}</span>
               </div>
-              <h3 title={video.videoTitle}>{video.videoTitle}</h3>
-              <div className="homevideos_video-info">
-                <p>{video.creator.name}</p>
-                <div className="homevideos_video-data">
-                  <span>{video.viewCount} views</span>
-                  <span>{video.publishData.slice(0, 10)}</span>
-                </div>
-              </div>
+            </div>
           </Link>
         ))}
       </div>
