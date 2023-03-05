@@ -22,16 +22,25 @@ function App() {
 
 function HomePage() {
   const [selectedLink, setSelectedLink] = useState('newvideos');
+  const [currentCategory, setCurrentCategory] = useState(null); // add state variable
 
   const handleLinkClick = (link) => {
     setSelectedLink(link);
   };
 
+  const handleCategoryClick = (category) => {
+    setCurrentCategory(category);
+  };
+
   return (
     <div className='margins'>
-      <Categories />
+      <Categories onCategoryClick={handleCategoryClick} />
       <NavigationLinks onLinkClick={handleLinkClick} />
-      {selectedLink === 'newvideos' ? <HomeVideos /> : <DevelopersList />}
+      {selectedLink === 'newvideos' ? (
+        <HomeVideos category={currentCategory} /> 
+      ) : (
+        <DevelopersList />
+      )}
     </div>
   );
 }

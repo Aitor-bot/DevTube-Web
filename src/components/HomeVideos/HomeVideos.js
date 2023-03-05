@@ -3,13 +3,17 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-function HomeVideos() {
+function HomeVideos({ category }) {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     async function fetchVideos() {
       try {
-        const response = await axios.get("http://localhost:3001/getData");
+        let endpoint = "http://localhost:3001/getData"; 
+        if (category) {
+          endpoint = `http://localhost:3001/getData/${category}`;
+        }
+        const response = await axios.get(endpoint);
         setVideos(response.data);
       } catch (error) {
         console.log(error);
@@ -17,8 +21,7 @@ function HomeVideos() {
     }
 
     fetchVideos();
-  }, []);
-
+  }, [category]);
   return (
     <div className="homevideos_container">
       <div className="homevideos_grid-container">
