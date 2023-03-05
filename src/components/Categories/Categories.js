@@ -18,11 +18,9 @@ function Categories({ onCategoryClick }) {
         <h1 className="categories_title">Explorar</h1>
         <div className="categories_gridcontainer">
           {categories.map((category, index) => (
-            <div className="categories_layout" key={index}>
-              <button className="category-label" onClick={() => handleClick(category)}>
+              <button key={index} className="category-button" onClick={() => handleClick(category)}>
                 {category.name}
               </button>
-            </div>
           ))}
         </div>
       </div>

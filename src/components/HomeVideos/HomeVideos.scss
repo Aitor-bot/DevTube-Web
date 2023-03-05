@@ -18,6 +18,8 @@
 .homevideos_image {
     position: relative;
     transition: transform 0.2s ease-in-out;
+    max-width: 480px;
+
 
     &:hover {
         transform: translateZ(20px) rotateX(-10deg) scale(1.1);

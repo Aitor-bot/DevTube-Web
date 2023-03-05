@@ -13,25 +13,9 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  
 }
 
-.categories_layout {
-  flex: 1 1 calc(50% - 10px);
-  max-width: 400px;
-  background-color: #0466c8;
-  border-radius: 8px;
-  cursor: pointer;
-
-}
-
-@media only screen and (min-width: 768px) {
-  .categories_layout {
-    flex: 1 1 calc(25% - 15px);
-  }
-}
-
-.category-label {
+.category-button {
   display: flex;
   align-items: center;
   height: 45px;
@@ -42,5 +26,10 @@
   font-weight: 500;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  flex: 1 1 calc(50% - 10px);
+  max-width: 400px;
+  background-color: #0466c8;
+  border-radius: 8px;
   cursor: pointer;
 }
