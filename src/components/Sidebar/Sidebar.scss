@@ -1,4 +1,16 @@
-.sidebar {
+.sidebar_img {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.sidebar_nav {
     position: absolute;
     top: 0;
     left: -300px;
@@ -9,36 +21,54 @@
     transition: all 0.3s ease-in-out;
     margin-top: 60px;
     z-index: 1;
-  
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-  
-      li {
-        padding: 10px;
-        border-bottom: 1px solid white;
-  
-        &:last-child {
-          border-bottom: none;
-        }
-      }
-    }
-  
+    
+
     &.open {
-      left: 0;
+        left: 0;
     }
-  }
+}
 
-  .sidebar-toggle {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    z-index: 1;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    border-radius: 10px;
+.sidebar_ul {
+    font-size: 14px;
+    font-weight: 400;
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin: 0;
+}
 
+.sidebar_ul li {
+    margin-bottom: 15px;
+    text-align: none;
+}
+li {
+    text-align: left;
+}
+
+.sidebar_ul svg {
+    vertical-align:sub;
+}
+
+.sidebar_separator {
+    height: 1px;
+    background-color: #0466c8;
+    opacity: 0.3;
+    margin: 20px 0;
+}
+
+.sidebar_mini-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: gray;
+    margin: 10px 0;
+}
+
+.sidebar_link-text {
+    margin-left: 20px;
   }
   
+.sidebar_channel-avatar {
+    width: 30px;
+    border-radius: 16px;
+    vertical-align: middle;
+}
