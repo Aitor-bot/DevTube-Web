@@ -60,7 +60,7 @@ function Sidebar() {
           <li>
             <Link to="/suscriptions">
               <AiFillYoutube size={25} />
-              <span className="sidebar_link-text">Suscriptions</span>
+              <span className="sidebar_link-text">Subscriptions</span>
             </Link>
           </li>
           <div className="sidebar_separator"></div>
