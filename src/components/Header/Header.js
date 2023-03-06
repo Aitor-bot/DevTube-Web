@@ -5,8 +5,8 @@ import Sidebar from '../Sidebar/Sidebar';
 function Header() {
   return (
     <div className="header_container">
-      <Sidebar></Sidebar>
-      <SearchBar></SearchBar>
+      <Sidebar />
+      <SearchBar />
 
     </div>
   );

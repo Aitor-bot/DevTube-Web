@@ -1,5 +1,13 @@
+.sidebar_container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+  }
+
 .sidebar_img {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 20px;
     z-index: 1;

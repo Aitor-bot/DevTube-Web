@@ -91,7 +91,11 @@ function Sidebar() {
                 <span className="sidebar_link-text">{link.linkText}</span>
               </Link>
             </li>
+
+
           ))}
+          <div className="sidebar_separator"></div>
+
 
         </ul>
       </nav>
