@@ -12,6 +12,35 @@ function Sidebar() {
     setIsOpen(!isOpen);
   };
 
+  const sidebarLinks = [
+    {
+      imageSrc: afro,
+      linkText: 'Afor_Digital',
+      linkUrl: '/afor_digital'
+    },
+    {
+      imageSrc: afro,
+      linkText: 'Afor_Digital',
+      linkUrl: '/afor_digital'
+    },
+    {
+      imageSrc: afro,
+      linkText: 'Afor_Digital',
+      linkUrl: '/afor_digital'
+    },
+    {
+      imageSrc: afro,
+      linkText: 'Afor_Digital',
+      linkUrl: '/afor_digital'
+    },
+    {
+      imageSrc: afro,
+      linkText: 'Afor_Digital',
+      linkUrl: '/afor_digital'
+    },
+  ];
+
+
   return (
     <div className='sidebar_container'>
       <img
@@ -55,13 +84,15 @@ function Sidebar() {
           </li>
           <div className="sidebar_separator"></div>
           <div className="sidebar_mini-title">Subscriptions</div>
-          <li>
-            <Link to="/afor_digital">
-              <img className='sidebar_channel-avatar' src={afro} alt="channel avatar"></img>
-            <span className="sidebar_link-text">Afor_Digital</span>
-            </Link>
+          {sidebarLinks.map((link, index) => (
+            <li key={index}>
+              <Link to={link.linkUrl}>
+                <img className='sidebar_channel-avatar' src={link.imageSrc} alt="channel avatar" />
+                <span className="sidebar_link-text">{link.linkText}</span>
+              </Link>
+            </li>
+          ))}
 
-          </li>
         </ul>
       </nav>
     </div>
