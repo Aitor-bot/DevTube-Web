@@ -29,7 +29,7 @@ function HomeVideos({ category }) {
     const seconds = duration % 60;
     return `${hours > 0 ? hours + ':' : ''}${minutes < 10 && hours > 0 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
-  
+
 
 
   return (

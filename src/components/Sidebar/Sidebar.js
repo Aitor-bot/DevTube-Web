@@ -18,45 +18,44 @@ function Sidebar() {
     {
       imageSrc: afro,
       linkText: 'Afor_Digital',
-      linkUrl: '/creator/midudev'
+      linkUrl: '/creator/afor%20digital'
     },
     {
       imageSrc: afro,
       linkText: 'Aforcita',
-      linkUrl: '/creator/afor_digital'
+      linkUrl: '/creator/afor%20digital'
     },
     {
       imageSrc: afro,
       linkText: 'Aforjefa',
-      linkUrl: '/creator/afor_digital'
+      linkUrl: '/creator/afor%20digital'
     },
     {
       imageSrc: afro,
       linkText: 'A4',
-      linkUrl: '/creator/afor_digital'
+      linkUrl: '/creator/afor%20digital'
     },
     {
       imageSrc: afro,
       linkText: 'Alfajor',
-      linkUrl: '/creator/afor_digital'
+      linkUrl: '/creator/afor%20digital'
     },
     {
       imageSrc: afro,
       linkText: 'Afro',
-      linkUrl: '/creator/afor_digital'
+      linkUrl: '/creator/afor%20digital'
     },
     {
       imageSrc: afro,
       linkText: 'Afrodita',
-      linkUrl: '/creator/afor_digital'
+      linkUrl: '/creator/afor%20digital'
     },
     {
       imageSrc: evilafor,
       linkText: 'EvilAfor',
-      linkUrl: '/creator/afor_digital'
+      linkUrl: '/creator/afor%20digital'
     },
   ];
-
 
   return (
     <div className='sidebar_container'>
@@ -102,12 +101,8 @@ function Sidebar() {
                 <span className="sidebar_link-text">{link.linkText}</span>
               </Link>
             </li>
-
-
           ))}
           <div className="sidebar_separator"></div>
-
-
         </ul>
       </nav>
     </div>
