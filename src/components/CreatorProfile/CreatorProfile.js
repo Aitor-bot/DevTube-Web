@@ -1,3 +1,5 @@
+import "./CreatorProfile.scss";
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
@@ -19,22 +21,32 @@ function CreatorProfile() {
     fetchCreatorData();
   }, [creatorName]);
 
+  function formatDuration(duration) {
+    const minutes = Math.floor(duration / 60);
+    const seconds = duration % 60;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
+
   return (
-    <div>
-      <div>
+    <div className="creatorprofile_container">
+      <div className="creatorprofile_grid-container">
         {videos.map((video) => (
-          <Link to={`/video/${video.videoId}`} key={video.videoId}>
-            <div>
-              <img src={video.videoThumbnail} alt={video.videoTitle} />
-              <h3>{video.videoTitle}</h3>
-              <p>{video.videoDescription}</p>
-              <div>
+          <div key={video.videoId}>
+            <Link to={`/video/${video.videoId}`}>
+              <div className="creatorprofile_image">
+                <div className="creatorprofile_duration">{formatDuration(video.videoDuration)}</div>
+                <img src={video.videoThumbnail} alt="videoThumbnail" />
+              </div>
+              <h3 title={video.videoTitle}>{video.videoTitle}</h3>
+            </Link>
+            <div className="creatorprofile_video-info">
+                <p>{video.name}</p>
+              <div className="creatorprofile_video-data">
                 <span>{video.viewCount} views</span>
-                <span>{video.videoDuration}</span>
-                <span>{video.publishData}</span>
+                <span>{video.publishData.slice(0, 10)}</span>
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>
