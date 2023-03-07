@@ -7,6 +7,7 @@ import NavigationLinks from './components/NavigationLinks/NavigationLinks';
 import HomeVideos from './components/HomeVideos/HomeVideos';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import DevelopersList from './components/DevelopersList/DevelopersList';
+import CreatorProfile from './components/CreatorProfile/CreatorProfile';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/video/:videoId" element={<WatchVideo />} />
+        <Route path="/creator/:creatorName" element={<CreatorProfile />} />
+
       </Routes>
     </Router>
   );

@@ -34,20 +34,24 @@ function HomeVideos({ category }) {
     <div className="homevideos_container">
       <div className="homevideos_grid-container">
         {videos.map((video) => (
-          <Link to={`/video/${video.videoId}`} key={video.videoId}>
-            <div className="homevideos_image">
-              <div className="homevideos_duration">{formatDuration(video.videoDuration)}</div>
-              <img src={video.videoThumbnail} alt="videoThumbnail" />
-            </div>
-            <h3 title={video.videoTitle}>{video.videoTitle}</h3>
+          <div key={video.videoId}>
+            <Link to={`/video/${video.videoId}`}>
+              <div className="homevideos_image">
+                <div className="homevideos_duration">{formatDuration(video.videoDuration)}</div>
+                <img src={video.videoThumbnail} alt="videoThumbnail" />
+              </div>
+              <h3 title={video.videoTitle}>{video.videoTitle}</h3>
+            </Link>
             <div className="homevideos_video-info">
-              <p>{video.creator.name}</p>
+              <Link to={`/creator/${video.creator.name}`}>
+                <p>{video.creator.name}</p>
+              </Link>
               <div className="homevideos_video-data">
                 <span>{video.viewCount} views</span>
                 <span>{video.publishData.slice(0, 10)}</span>
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>
