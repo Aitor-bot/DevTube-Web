@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import './Sidebar.scss';
 import aforguesa from "../../assets/aforguesa.webp";
 import afro from "../../assets/afro.webp";
+import aforguesabuena from "../../assets/aforguesabuena.webp"
+import evilafor from "../../assets/evilafor.webp"
 import { AiFillHome, AiFillYoutube, AiFillFolder, AiFillAlert, AiFillPlaySquare } from "react-icons/ai";
 
 function Sidebar() {
@@ -16,27 +18,42 @@ function Sidebar() {
     {
       imageSrc: afro,
       linkText: 'Afor_Digital',
-      linkUrl: '/afor_digital'
+      linkUrl: '/creator/midudev'
     },
     {
       imageSrc: afro,
-      linkText: 'Afor_Digital',
-      linkUrl: '/afor_digital'
+      linkText: 'Aforcita',
+      linkUrl: '/creator/afor_digital'
     },
     {
       imageSrc: afro,
-      linkText: 'Afor_Digital',
-      linkUrl: '/afor_digital'
+      linkText: 'Aforjefa',
+      linkUrl: '/creator/afor_digital'
     },
     {
       imageSrc: afro,
-      linkText: 'Afor_Digital',
-      linkUrl: '/afor_digital'
+      linkText: 'A4',
+      linkUrl: '/creator/afor_digital'
     },
     {
       imageSrc: afro,
-      linkText: 'Afor_Digital',
-      linkUrl: '/afor_digital'
+      linkText: 'Alfajor',
+      linkUrl: '/creator/afor_digital'
+    },
+    {
+      imageSrc: afro,
+      linkText: 'Afro',
+      linkUrl: '/creator/afor_digital'
+    },
+    {
+      imageSrc: afro,
+      linkText: 'Afrodita',
+      linkUrl: '/creator/afor_digital'
+    },
+    {
+      imageSrc: evilafor,
+      linkText: 'EvilAfor',
+      linkUrl: '/creator/afor_digital'
     },
   ];
 
@@ -45,7 +62,7 @@ function Sidebar() {
     <div className='sidebar_container'>
       <img
         className="sidebar_img"
-        src={isOpen ? afro : aforguesa}
+        src={isOpen ? aforguesabuena : aforguesa}
         alt="Toggle Sidebar"
         onClick={toggleSidebar}
       />
