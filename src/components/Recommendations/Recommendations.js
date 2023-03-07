@@ -31,7 +31,7 @@ function Recommendations() {
         <div className="recommendations_container">
             {videos.map((video) => (
                 <Link to={`/video/${video.videoId}`} key={video.videoId}
-                onClick={goToTop}
+                    onClick={goToTop}
                 >
                     <div className="recommendations_subcontainer" key={video.videoId}>
                         <div className="recommendations_image">
@@ -40,8 +40,11 @@ function Recommendations() {
                         <div className="recommendations_info">
                             <h3 title={video.videoTitle} className="recommendations_title">{video.videoTitle}</h3>
                             <div className="recommendations_creator">
-                                {video.creator.name}
+                                <Link to={`/creator/${video.creator.name}`}>
+                                    <p>{video.creator.name}</p>
+                                </Link>
                             </div>
+
                             <div className='recommendations_details'>{video.viewCount} {video.publishData.slice(0, 10)}</div>
                         </div>
                     </div>

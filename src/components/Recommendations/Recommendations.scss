@@ -26,7 +26,6 @@
   }
 }
 
-
 .recommendations_image {
   width: 168px;
   height: 94px;
@@ -57,6 +56,8 @@
 
 
 .recommendations_title {
+  position: relative;
+  z-index: 1; 
   font-size: 16px;
   margin: 0;
   font-weight: bold;
@@ -74,10 +75,12 @@
   }
 }
 
-.recommendations_creator {
+.recommendations_creator p {
+  position: relative;
+  z-index: -1;
   font-size: 14px;
   color: gray;
-  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .recommendations_details {
