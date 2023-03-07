@@ -5,7 +5,7 @@ import aforguesa from "../../assets/aforguesa.webp";
 import afro from "../../assets/afro.webp";
 import aforguesabuena from "../../assets/aforguesabuena.webp"
 import evilafor from "../../assets/evilafor.webp"
-import { AiFillHome, AiFillYoutube, AiFillFolder, AiFillAlert, AiFillPlaySquare } from "react-icons/ai";
+import { AiFillHome, AiFillFolder, AiFillAlert, AiFillPlaySquare } from "react-icons/ai";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,12 +72,6 @@ function Sidebar() {
             <Link to="/">
               <AiFillHome size={25} />
               <span className="sidebar_link-text">Home</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/suscriptions">
-              <AiFillYoutube size={25} />
-              <span className="sidebar_link-text">Subscriptions</span>
             </Link>
           </li>
           <div className="sidebar_separator"></div>

@@ -24,7 +24,7 @@ function DevelopersList() {
         <div className="devlist_container">
             <div className="devlist_grid-container">
                 {devData.map((dev) => (
-                    <Link key={dev._id}>
+                    <Link to={`/creator/${dev.name}`} key={dev._id}>
                         <div className="devlist_image">
                             <img src={dev.avatar} alt="dev avatar" />
                         </div>
