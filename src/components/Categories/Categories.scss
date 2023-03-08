@@ -11,7 +11,6 @@
 
 .categories_gridcontainer {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -29,7 +28,7 @@
   border: none;
   cursor: pointer;
   flex: 1 1 calc(50% - 10px);
-  max-width: 400px;
+  max-width: 450px;
   background-color: #0466c8;
   border-radius: 8px;
   cursor: pointer;

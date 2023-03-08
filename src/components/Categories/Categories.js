@@ -2,11 +2,13 @@ import './Categories.scss';
 
 function Categories({ onCategoryClick }) {
     const categories = [
+      { name: "All", endpoint: "" },
       { name: "Web dev", endpoint: "webdev" },
       { name: "App dev", endpoint: "appdev" },
       { name: "Game dev", endpoint: "gamedev" },
       { name: "Hacking", endpoint: "hacking" },
       { name: "Kukoro", endpoint: "kukoro" },
+
     ];
   
     const handleClick = (category) => {
