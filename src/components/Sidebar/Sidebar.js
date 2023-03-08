@@ -81,7 +81,7 @@ function Sidebar() {
           </li>
           <div className="sidebar_separator"></div>
           <li>
-            <Link to="/resources">
+            <Link to="https://twitter.com/pheralb_" target="_blank">
               <AiFillFolder size={25} />
               <span className="sidebar_link-text">Resources</span>
             </Link>
@@ -93,7 +93,10 @@ function Sidebar() {
             </Link>
           </li>
           <li>
-            <Link to="/lofi">
+            <Link 
+            to="https://www.twitch.tv/afor_digital/clip/GentleSparklingSproutDatBoi-edUxmLaJ3nBbYQ9Z?filter=clips&range=all&sort=time"
+            target="_blank"
+            >
               <AiFillPlaySquare size={25} />
               <span className="sidebar_link-text">LOFI</span>
             </Link>
