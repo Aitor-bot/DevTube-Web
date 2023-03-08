@@ -11,7 +11,7 @@ function DevelopersList() {
     useEffect(() => {
         async function fetchDevelopers() {
             try {
-                const response = await axios.get("http://localhost:3001/getCreatorsData")
+                const response = await axios.get("https://devtube-production.up.railway.app/getCreatorsData")
                 setDevData(response.data)
             } catch (error) {
                 console.log(error)

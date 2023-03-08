@@ -10,7 +10,7 @@ function Recommendations() {
     useEffect(() => {
         async function fetchVideos() {
             try {
-                const response = await axios.get("http://localhost:3001/getData");
+                const response = await axios.get("https://devtube-production.up.railway.app/getData");
                 setVideo(response.data);
             } catch (error) {
                 console.log(error);

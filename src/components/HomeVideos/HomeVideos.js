@@ -9,9 +9,9 @@ function HomeVideos({ category }) {
   useEffect(() => {
     async function fetchVideos() {
       try {
-        let endpoint = "http://localhost:3001/getData";
+        let endpoint = "https://devtube-production.up.railway.app/getData";
         if (category) {
-          endpoint = `http://localhost:3001/getData/${category}`;
+          endpoint = `https://devtube-production.up.railway.app/getData/${category}`;
         }
         const response = await axios.get(endpoint);
         setVideos(response.data);
