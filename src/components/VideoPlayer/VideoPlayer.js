@@ -6,6 +6,7 @@ import YouTube from 'react-youtube';
 import WordDensity from '../WordDensity/WordDensity';
 import Recommendations from '../Recommendations/Recommendations';
 import Spinner from '../Spinner/Spinner.js'
+import { Link } from 'react-router-dom';
 
 function VideoPlayer({ videoId }) {
     const [video, setVideo] = useState(null);
@@ -54,7 +55,9 @@ function VideoPlayer({ videoId }) {
                     <div className="videoplayer_info">
                         <img src={video.creator.avatar} alt="Channel Avatar" />
                         <div>
-                            <h2 className='videoplayer_channelname'>{video.creator.name}</h2>
+                            <Link to={`/creator/${video.creator.name}`}>
+                                <h2 className='videoplayer_channelname'>{video.creator.name}</h2>
+                            </Link>
                             <p className='videoplayer_subs'>{video.creator.subscribersCount} subscribers</p>
                         </div>
                     </div>
