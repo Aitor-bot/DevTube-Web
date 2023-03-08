@@ -54,8 +54,10 @@ function Sidebar() {
     {
       imageSrc: evilafor,
       linkText: 'EvilAfor',
-      linkUrl: '/creator/afor%20digital'
+      linkUrl: 'https://www.twitch.tv/afor_digital/clip/ShyCulturedClipsmomKeyboardCat-XpRtalYKT0ZgoqJh?filter=clips&range=all&sort=time',
+      target: '_blank'
     },
+
   ];
 
   return (
@@ -100,12 +102,13 @@ function Sidebar() {
           <div className="sidebar_mini-title">Subscriptions</div>
           {sidebarLinks.map((link, index) => (
             <li key={index}>
-              <Link to={link.linkUrl}>
+              <Link to={link.linkUrl} target={link.target}>
                 <img className='sidebar_channel-avatar' src={link.imageSrc} alt="channel avatar" />
                 <span className="sidebar_link-text">{link.linkText}</span>
               </Link>
             </li>
           ))}
+
           <div className="sidebar_separator"></div>
         </ul>
       </nav>
