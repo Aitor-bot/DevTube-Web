@@ -11,7 +11,7 @@ function HomeVideos({ category }) {
   useEffect(() => {
     async function fetchVideos() {
       try {
-        const endpoint = category ? `http://localhost:3001/getData/${category}` : "http://localhost:3001/getData";
+        const endpoint = category ? `https://devtube-production.up.railway.app/getData/${category}` : "https://devtube-production.up.railway.app/getData";
         const response = await axios.get(endpoint);
         setVideos(response.data);
       } catch (error) {

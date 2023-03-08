@@ -15,7 +15,7 @@ function VideoPlayer({ videoId }) {
     useEffect(() => {
         async function fetchVideo() {
             try {
-                const response = await axios.get(`http://localhost:3001/getVideoData/${videoId}`);
+                const response = await axios.get(`https://devtube-production.up.railway.app/getVideoData/${videoId}`);
                 setVideo(response.data);
             } catch (error) {
                 console.log(error);

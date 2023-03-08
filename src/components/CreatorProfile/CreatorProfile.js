@@ -15,7 +15,7 @@ function CreatorProfile() {
   useEffect(() => {
     async function fetchCreatorData() {
       try {
-        const response = await axios.get(`http://localhost:3001/getCreatorData/${creatorName}`);
+        const response = await axios.get(`https://devtube-production.up.railway.app/getCreatorData/${creatorName}`);
         setCreatorData(response.data);
         setVideos(response.data.videos);
       } catch (error) {
