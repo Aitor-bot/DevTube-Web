@@ -27,7 +27,7 @@ function App() {
 
 function HomePage() {
   const [selectedLink, setSelectedLink] = useState('newvideos');
-  const [currentCategory, setCurrentCategory] = useState(null); // add state variable
+  const [currentCategory, setCurrentCategory] = useState(null);
 
   const handleLinkClick = (link) => {
     setSelectedLink(link);

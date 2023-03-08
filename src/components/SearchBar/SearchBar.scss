@@ -3,6 +3,10 @@
   align-items: center;
   justify-content: center;
   padding-top: 10px;
+
+  @media only screen and (max-width: 800px) {
+    justify-content: flex-end;
+  }
 }
 
 .searchbar_input {
@@ -15,6 +19,14 @@
   border-radius: 5px;
   padding-left: 10px;
   transition: border-color 0.3s ease-in-out;
+
+  @media only screen and (max-width: 800px) {
+    width: 200px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    width: 100px;
+  }
 }
 
 .searchbar_input:focus {
