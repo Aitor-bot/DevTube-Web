@@ -2,6 +2,7 @@ import "./HomeVideos.scss";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Spinner from "../Spinner/Spinner";
 
 function HomeVideos({ category }) {
   const [videos, setVideos] = useState([]);
@@ -33,7 +34,7 @@ function HomeVideos({ category }) {
   }
 
   if (loading) {
-    return <h1 className="loading">Loading...</h1>;
+    return <Spinner></Spinner>;
   }
 
   return (
