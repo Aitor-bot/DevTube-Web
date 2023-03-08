@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function HomeVideos({ category }) {
   const [videos, setVideos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchVideos() {
@@ -15,6 +16,7 @@ function HomeVideos({ category }) {
         }
         const response = await axios.get(endpoint);
         setVideos(response.data);
+        setLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -30,7 +32,9 @@ function HomeVideos({ category }) {
     return `${hours > 0 ? hours + ':' : ''}${minutes < 10 && hours > 0 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
 
-
+  if (loading) {
+    return <h1 className="loading">Loading...</h1>;
+  }
 
   return (
     <div className="homevideos_container">

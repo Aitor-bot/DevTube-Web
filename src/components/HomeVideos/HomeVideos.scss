@@ -5,6 +5,10 @@
 
 }
 
+.loading {
+    color: white
+}
+
 .homevideos_grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
