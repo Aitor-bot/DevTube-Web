@@ -13,12 +13,14 @@ function App() {
   return (
     <Router>
       <Header />
+      <div className='margins'>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/video/:videoId" element={<WatchVideo />} />
         <Route path="/creator/:creatorName" element={<CreatorProfile />} />
-
       </Routes>
+      </div>
+
     </Router>
   );
 }
@@ -36,7 +38,7 @@ function HomePage() {
   };
 
   return (
-    <div className='margins'>
+    <div>
       <Categories onCategoryClick={handleCategoryClick} />
       <NavigationLinks onLinkClick={handleLinkClick} />
       {selectedLink === 'newvideos' ? (
