@@ -5,6 +5,7 @@ import aforguesa from "../../assets/aforguesa.webp";
 import afro from "../../assets/afro.webp";
 import aforguesabuena from "../../assets/aforguesabuena.webp"
 import evilafor from "../../assets/evilafor.webp"
+import logo from "../../assets/logo.webp"
 import { AiFillHome, AiFillFolder, AiFillAlert, AiFillPlaySquare } from "react-icons/ai";
 
 function Sidebar() {
@@ -65,6 +66,9 @@ function Sidebar() {
         alt="Toggle Sidebar"
         onClick={toggleSidebar}
       />
+      <Link to="/">
+      <img className='sidebar_logo' src={logo} alt="logo"></img>
+      </Link>
       <nav className={`sidebar_nav ${isOpen ? 'open' : ''}`}>
         <ul className='sidebar_ul'>
           <li>
