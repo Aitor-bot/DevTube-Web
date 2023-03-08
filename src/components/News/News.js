@@ -31,7 +31,6 @@ const articles = [{
 function News() {
     return (
       <div className='news_container'>
-        <h1 className="news_title">News</h1>
         {articles.map((article, index) => (
           <a key={index} href={article.url} target="_blank" rel="noopener noreferrer">
             <div>
