@@ -13,6 +13,11 @@
   }
 }
 
+.recommendations_container.loading {
+  margin-right: 150px;
+}
+
+
 .recommendations_subcontainer {
   display: flex;
   flex-direction: row;
