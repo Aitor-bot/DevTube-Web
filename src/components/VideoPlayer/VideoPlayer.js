@@ -54,7 +54,7 @@ function VideoPlayer({ videoId }) {
                         <img src={video.creator.avatar} alt="Channel Avatar" />
                         <div>
                             <h2 className='videoplayer_channelname'>{video.creator.name}</h2>
-                            <p className='videoplayer_subs'>{video.creator.subscribersCount} suscriptores</p>
+                            <p className='videoplayer_subs'>{video.creator.subscribersCount} subscribers</p>
                         </div>
                     </div>
                     <div className='videoplayer_button-container'>
@@ -76,7 +76,7 @@ function VideoPlayer({ videoId }) {
                     </div>
 
                     <div className='videoplayer_data'>
-                        <span className='videoplayer_data-views'>{video.viewCount} visitas</span>
+                        <span className='videoplayer_data-views'>{video.viewCount} views</span>
                         <span className='videoplayer_data-publish'>{video.publishData.slice(0, 10)}</span>
                         <div className="videoplayer_data-description">
                             {componentToShow === 'wordDensity' ? (

@@ -15,7 +15,7 @@ function NavigationLinks({ onLinkClick }) {
         className={`navigation-link ${selectedLink === 'newvideos' ? 'selected' : ''}`}
         onClick={() => handleLinkClick('newvideos')}
       >
-        Novedades
+        News
       </button>
       <button
         className={`navigation-link ${selectedLink === 'topdevelopers' ? 'selected' : ''}`}
