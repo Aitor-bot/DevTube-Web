@@ -5,6 +5,7 @@ import axios from "axios";
 import YouTube from 'react-youtube';
 import WordDensity from '../WordDensity/WordDensity';
 import Recommendations from '../Recommendations/Recommendations';
+import Spinner from '../Spinner/Spinner.js'
 
 function VideoPlayer({ videoId }) {
     const [video, setVideo] = useState(null);
@@ -92,7 +93,7 @@ function VideoPlayer({ videoId }) {
 
                 </div>
             ) : (
-                <p>Loading...</p>
+                <Spinner />
             )}
         </div>
     );
