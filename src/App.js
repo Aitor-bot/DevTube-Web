@@ -8,6 +8,7 @@ import HomeVideos from './components/HomeVideos/HomeVideos';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import DevelopersList from './components/DevelopersList/DevelopersList';
 import CreatorProfile from './components/CreatorProfile/CreatorProfile';
+import News from './components/News/News';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/video/:videoId" element={<WatchVideo />} />
         <Route path="/creator/:creatorName" element={<CreatorProfile />} />
+        <Route path="/news" element={<News />} />
       </Routes>
       </div>
 
