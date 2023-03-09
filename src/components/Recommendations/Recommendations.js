@@ -12,7 +12,7 @@ function Recommendations() {
     useEffect(() => {
         async function fetchVideos() {
             try {
-                const response = await axios.get("https://devtube-production.up.railway.app/getData");
+                const response = await axios.get("https://lovely-dove-leggings.cyclic.app/getData");
                 setVideos(response.data);
             } catch (error) {
                 console.log(error);

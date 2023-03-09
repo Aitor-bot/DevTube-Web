@@ -11,7 +11,7 @@ function DevelopersList() {
     useEffect(() => {
         async function fetchDevelopers() {
             try {
-                const response = await axios.get("https://devtube-production.up.railway.app/getAllCreators");
+                const response = await axios.get("https://lovely-dove-leggings.cyclic.app/getAllCreators");
                 setDevData(response.data);
             } catch (error) {
                 console.log(error);

@@ -13,7 +13,7 @@ function WordDensity({ videoId }) {
         async function fetchWordData() {
             try {
                 const response = await axios.get(
-                    `https://devtube-production.up.railway.app/getTranscriptionDataForVideo/${videoId}`
+                    `https://lovely-dove-leggings.cyclic.app/getTranscriptionDataForVideo/${videoId}`
                 );
                 setWordCount(response.data.wordCount);
                 setWordsPerMinute(response.data.wordsPerMinute);
