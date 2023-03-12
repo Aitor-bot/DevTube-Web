@@ -2,7 +2,13 @@ import './Categories.scss';
 import { useState } from 'react';
 
 function Categories({ onCategoryClick }) {
-  const categories = [{ name: "All", endpoint: "" }, { name: "Web dev", endpoint: "webdev" }, { name: "App dev", endpoint: "appdev" }, { name: "Game dev", endpoint: "gamedev" }, { name: "Hacking", endpoint: "hacking" }, { name: "Kukoro", endpoint: "kukoro" },];
+  const categories = 
+  [{ name: "All", endpoint: "" }, 
+  { name: "Web dev", endpoint: "webdev" }, 
+  { name: "App dev", endpoint: "appdev" }, 
+  { name: "Game dev", endpoint: "gamedev" }, 
+  { name: "Hacking", endpoint: "hacking" }, 
+  { name: "Kukoro", endpoint: "kukoro" },];
 
   const [selectedCategory, setSelectedCategory] = useState(null);
 
